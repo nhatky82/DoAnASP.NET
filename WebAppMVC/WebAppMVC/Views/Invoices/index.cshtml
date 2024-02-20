@@ -1,0 +1,229 @@
+﻿@* @model Invoice *@
+@model WebAppMVC.Models.ViewModels.InvoiceViewModel
+
+<div class="container w-75">
+    <div class="row">
+        <div class="col-md-12 mt-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">THANH TOÁN</h5>
+                    <hr />
+                    @{
+                        var total1 = ViewBag.Total;
+                        var reduce = ViewBag.Reduce;
+                        var total2 = total1 + reduce;
+                    }
+
+                    
+                        @* Thông tin giao hàng *@
+                        <form asp-action="CheckOut" asp-controller="Invoices">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    @* Thông tin thanh toán *@
+                                    <div class="col-md-12">
+                                    <p class="card-description font-weight-bold">THÔNG TIN GIAO HÀNG</p>
+
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">@Html.DisplayNameFor(model => model.Invoice.Name)</label>
+                                            <div class="col-sm-9">
+                                            <input asp-for="Invoice.Name" type="text" class="form-control" name="Name">
+                                            </div>
+                                            <span asp-validation-for="Invoice.Name" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">@Html.DisplayNameFor(model => model.Invoice.ShippingAddress)</label>
+                                            <div class="col-sm-9">
+                                            <input asp-for="Invoice.ShippingAddress" type="text" class="form-control" name="ShippingAddress">
+                                            </div>
+                                            <span asp-validation-for="Invoice.ShippingAddress" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">@Html.DisplayNameFor(model => model.Invoice.ShippingPhone)</label>
+                                            <div class="col-sm-9">
+                                            <input asp-for="Invoice.ShippingPhone" type="text" class="form-control" name="ShippingPhone">
+                                            </div>
+                                            <span asp-validation-for="Invoice.ShippingPhone" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">id mã giảm giá</label>
+                                            <div class="col-sm-9">
+                                            <input type="hidden" class="form-control" name="vouchersId" value="@ViewBag.VoucherId">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Giá tiền</label>
+                                            <div class="col-sm-9">
+                                            <input type="hidden" class="form-control" name="total" value="@total2">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr />
+                                    @* Phương Thức thanh toán *@
+                                    <div class="col-md-12">
+                                    <p class="card-description font-weight-bold">PHƯƠNG THỨC THANH TOÁN</p>
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" name="pay" value="0">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                <div class="mx-2" style="width:40px;height:24px;display:inline-block;">
+                                                    <img src="~/Images/checkout/icon_zalopay.png" />
+
+                                                </div>
+                                                Ví ZaloPay
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" name="pay" value="1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                <div class="mx-2" style="width:40px;height:24px;display:inline-block;">
+                                                    <img src="~/Images/checkout/icon_vnpay.png" />
+
+                                                </div>
+                                                Ví VNPay
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" name="pay" value="2">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                <div class="mx-2" style="width:40px;height:24px;display:inline-block;">
+                                                    <img src="~/Images/checkout/icon_shopeepay.png" style="height:24px" />
+
+                                                </div>
+                                                Ví ShopeePay
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" name="pay" value="3">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                <div class="mx-2" style="width:40px;height:24px;display:inline-block;">
+                                                    <img src="~/Images/checkout/icon_momo.png" style="height:24px" />
+
+                                                </div>
+                                                Ví Momo
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" name="pay" value="4">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                <div class="mx-2" style="width:40px;height:30px;display:inline-block;">
+                                                    <img src="~/Images/checkout/icon_atm.png" style="height:24px" />
+
+                                                </div>
+                                                ATM/internet Banking
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" name="pay" value="5">
+                                            <label class="form-check-label text-center" for="flexRadioDefault2">
+                                                <div class="mx-2" style="width:40px;height:30px;display:inline-block;">
+                                                    <img src="~/Images/checkout/icon_cash.png" style="height:24px;" />
+
+                                                </div>
+                                                Thanh toán bằng tiền mặt khi nhận hàng
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <hr />
+                                </div>
+
+
+                                @* Tính Tiền *@
+                                <div class="col-lg-5">
+                                    <div class="shoping__checkout mt-0">
+
+                                            <p>Tổng Tiền hàng<span style="float:right;"> @string.Format("{0:#,##0} đ", ViewBag.Total)</span></p>
+
+                                            <p>Tổng Vouchers giảm giá<span style="float:right;"> @string.Format("{0:#,##0} đ", ViewBag.Reduce)</span></p>
+                                        <ul>
+                                            <li>Tổng thanh toán <span> @string.Format("{0:#,##0} đ", total2)</span></li>
+                                        </ul>
+                                        <button type="submit" class="primary-btn" style="text-decoration:none;">Thanh Toán</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    @* Áp Dụng Mã Giảm Giá *@
+
+                    <div class="col-lg-6">
+                        <div class="shoping__continue">
+                            <div class="shoping__discount mt-0">
+                                <p class="card-description font-weight-bold">MÃ KHUYẾN MÃI/MÃ QUÀ TẶNG</p>
+                                
+                                    <partial name="_Partial_Voucher" model="Model" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr />
+
+                   @*  Kiểm Tra Sản Phẩm Của Đơn Hàng *@
+                    <div class="col-md-12">
+                        <p class="card-description font-weight-bold">KIỂM TRA LẠI ĐƠN HÀNG</p>
+
+                        <div class="shoping__cart__table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="shoping__product">Sản Phẩm</th>
+                                        <th>Đơn Giá</th>
+                                        <th>Số Lượng</th>
+                                        <th>Số Tiền</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.Carts)
+                                    {
+                                        <tr>
+                                            <td class="shoping__cart__item">
+                                                <img style="width:150px" src="~/Images/Product/SachTamly/@item.Product.Image" alt="">
+                                                <h5>@item.Product.Name</h5>
+                                            </td>
+                                            <td class="shoping__cart__price">
+                                                @string.Format("{0:#,##0} đ", item.Product.Price)
+                                            </td>
+                                            <td class="shoping__cart__quantity">
+                                                <div class="quantity">
+                                                    <div class="pro-qty">
+                                                        <input type="text" value="@item.Quantity">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="shoping__cart__total">
+                                                @string.Format("{0:#,##0} đ", item.Product.Price * item.Quantity)
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Comment>
+
+<table class="table text-center ">
+    <thead class="table table-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>Chức năng</th>
+        </tr>
+    </thead>
+    <tbody class="table-light">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CommentDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-danger w-100 mb-1">Edit</a> <br>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info w-100 mb-1  ">Details</a> <br>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-success w-100 mb-1  ">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

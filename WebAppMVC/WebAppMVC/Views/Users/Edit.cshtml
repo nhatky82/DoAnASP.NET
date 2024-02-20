@@ -1,0 +1,58 @@
+﻿@{
+	ViewData["Title"] = "Edit";
+	Layout = "~/Views/Shared/LayoutASP.cshtml";
+}
+
+@model User
+
+<section class="breadcrumb-section set-bg" data-setbg="Images/Product/Banner/contact.jpg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="breadcrumb__text">
+					<h2>CẬP NHẬT TÀI KHOẢN</h2>
+					<div class="breadcrumb__option">
+						<a asp-area="" asp-controller="Home" asp-action="Index">Trang Chủ</a>
+						<span>Tài Khoản</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="shoping-cart spad pt-4">
+	<div class="container w-50">
+		<h4 class="mb-3">Thông tin tài khoản</h4>
+		<div class="row">
+			<div class="col-lg-9">
+				<form asp-action="Edit">
+					<input asp-for="Id" type="hidden" />
+					<input asp-for="UserName" type="hidden" />
+					<input asp-for="Password" type="hidden" />
+					<div class="mb-3">
+						<label asp-for="FullName" class="form-label"></label>
+						<input asp-for="FullName" class="form-control">
+					</div>
+
+					<div class="mb-3">
+						<label asp-for="Email" class="form-label"></label>
+						<input asp-for="Email" class="form-control">
+					</div>
+					<div class="mb-3">
+						<label asp-for="Phone" class="form-label"></label>
+						<input asp-for="Phone" class="form-control">
+					</div>
+
+					<div class="mb-3">
+						<label asp-for="Address" class="form-label"></label>
+						<input asp-for="Address" class="form-control">
+					</div>
+					<input asp-for="Avatar" type="hidden" />
+					<button type="submit" class="btn btn-outline-success float-center w-25">Lưu Thay Đổi</button>
+				</form>
+			</div>
+		</div>
+</section>
+

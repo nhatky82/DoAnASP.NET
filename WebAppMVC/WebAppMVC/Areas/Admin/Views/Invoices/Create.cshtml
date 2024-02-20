@@ -1,0 +1,62 @@
+﻿@model Invoice
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Invoices" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Code" class="control-label"></label>
+                <input asp-for="Code" class="form-control" />
+                <span asp-validation-for="Code" class="text-danger">Hãy nhập mã </span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InvoiceDate" class="control-label"></label>
+                <select asp-for="InvoiceDate" class="form-control" ></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserID" class="control-label"></label>
+                <input asp-for="UserID" class="form-control" />
+                <span asp-validation-for="UserID" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="PaymentMethodsID" class="control-label"></label>
+                <input asp-for="PaymentMethodsID" class="form-control" />
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="ShippingAddress" class="control-label"></label>
+                <input asp-for="ShippingAddress" class="form-control" />
+                <span asp-validation-for="ShippingAddress" class="text-danger">Vui lòng nhập địa chỉ!</span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShippingPhone" class="control-label"></label>
+                <input asp-for="ShippingPhone" class="form-control" />
+                <span asp-validation-for="ShippingPhone" class="text-danger">Vui lòng nhập số điện thoại!</span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VoucherID" class="control-label"></label>
+                <input asp-for="VoucherID" class="form-control" />
+                <span asp-validation-for="VoucherID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalPrice" class="control-label"></label>
+                <input asp-for="TotalPrice" class="form-control" />
+                <span asp-validation-for="TotalPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="status" /> @Html.DisplayNameFor(model => model.status)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Quay lại trang </a>
+</div>
+
+

@@ -1,0 +1,76 @@
+﻿@model WebAppMVC.Models.Product
+
+<div style="background-color:#e8e8e8;padding-bottom:100px;margin-bottom:0px">
+    <div style="margin-left:100px">
+        @* <form method="get" asp-action="Index" asp-controller="Home" style="padding-top:50px;margin-left:10px;margin-bottom:-86px"> *@
+        <div style="padding-top:50px; margin-left:10px; margin-bottom:-86px">
+            <button class="btn-back" onclick="goBack()"> <<< Trở về</button>
+            <script>
+                function goBack() {
+                    window.location.href = document.referrer;
+                }
+            </script>
+        </div>
+
+        @* </form> *@
+    </div>
+    <div class="row" >
+        <div class="div-border" style="margin:100px;background-color:white">
+        <div class="row">
+            <div class="col-md-5 mb-3">
+            <img class="product-zoom" style="width:1200px;height:600px" src="~/Images/Product/SachTamly/@Model.Image" />
+                <div style="margin-left:100px">
+                    <button style="border-color:red "><img style="width:130px;height:90px" src="~/Images/Product/SachTamly/@Model.Image" /></button>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <h2 class="mb-5" style="font-weight:bold;margin-left:50px">@Model.Name</h2>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="mb-3"> <strong>Mô Tả: </strong>@Model.Description</label>
+                        <label class="mb-1"><strong>Loại Sách:</strong>  @Model.Type</label>
+                    </div>
+                    <div class="col-md-6 mr-0">
+                       <label><strong>Tác Giả :</strong> @Model.Publisher</label>
+                    </div>
+                </div>
+                <div class="d-flex flex-row">
+                <label class="mb-3"> <strong>Giá Tiền:</strong></label>
+                        <label style="color:red">@Model.Price.ToString("#,##0") VNĐ</label>
+                </div>
+                <div class="mb-2">
+                        @if(Model.Status==true){
+                            <label style="color:green"> <strong class="text-dark">Trạng thái :</strong> Còn hàng</label>
+                        }
+                        else
+                        {
+                            <label style="color:red"> <strong class="text-dark">Trạng thái :</strong>Hết hàng</label>
+                        }
+                </div>
+
+                 <label  class="mb-3">
+                    <strong>Chính sách đổi trả:</strong> Đổi trả sản phẩm trong 30 ngày.
+                </label>
+                <div class="quantity-container mb-5">
+                <label for="quantity"><strong>Số lượng:</strong></label>
+                    <button onclick="decreaseQuantity()" class="quantity-btn" id="decreaseBtn" disabled>-</button>
+                    <input type="text" id="quantity" class="quantity-input" value="1" readonly style="width:40px;text-align:center">
+                    <button onclick="increaseQuantity()" class="quantity-btn" id="increaseBtn">+</button>
+
+                </div>
+                <div class="d-flex flex-row mb-3">
+                    <button class="custom-button" style="margin-right:20px">Thêm vào giỏ hàng</button>
+                    <button class="custom-buy" style="margin-right:20px">Mua ngay</button>
+                </div>
+                <div class="phone">
+                <label style="margin-bottom:10px"><strong>Gọi đặt hàng :</strong><strong style="color:red;margin-left:2px">(084)3820 7158</strong> hoặc <strong style="color:red">0933 109 009</strong> </label><br />
+                  <label style="margin-bottom:10px"><strong>Thông tin & Khuyến mãi</strong></label>
+                <p style="margin-bottom:10px">- Sử dụng mỗi <strong style="color:aqua">3000xu</strong> để được giảm giá <strong style="color:red">10.000đ</strong></p>
+                <p style="margin-bottom:10px">- Freeship nội thành <strong style="color:red">Sài Gòn</strong> với đơn hàng từ <strong style="color:red">150.000đ</strong></p>
+                <p style="margin-bottom:10px">- Freeship <strong style="color:red">toàn quốc</strong> với đơn hàng từ <strong style="color:red">250.000đ</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

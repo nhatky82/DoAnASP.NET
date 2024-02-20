@@ -1,0 +1,97 @@
+﻿@model IEnumerable<Product>
+<a class="btn btn-secondary mb-4" asp-controller="Products" asp-action="ExprotExcel">Export File to Excel </a>
+<a class="btn btn-dark mb-4" asp-controller="Products" asp-action="Create">Thêm sách</a>
+<table  class="table table-light table-hover text-center">
+    <thead class="table table-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.SKU)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Publisher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>*@
+            <@*th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.LinkEbook)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.ProductType)
+            </th>*@
+            <th>
+                Chức năng
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.SKU)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Publisher)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                @*<td>
+                    <img src="~/Images/Product/SachTamly/@item.Image" style="width: 100%; border:none;border-radius:0;  " />
+                </td>*@
+               @* <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>*@
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.LinkEbook)
+                </td>*@
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.ProductType)
+                </td>*@
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-danger w-100 mb-1 ">Sửa</a> <br>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info w-100 mb-1">Xem chi tiết</a> <br>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-success w-100 ">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<ul class="pagination justify-content-center">
+    @for (int i = 1; i < ViewBag.PageCount; i++)
+    {
+        <li class="page-item"><a class="page-link" asp-action="Products" asp-route-p="@i">@i</a></li>
+    }
+</ul> 

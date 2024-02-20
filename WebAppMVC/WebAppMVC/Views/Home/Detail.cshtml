@@ -1,0 +1,33 @@
+﻿@model WebAppMVC.Models.Product
+
+
+<div class="row">
+    <form asp-action="Detail">
+        <input type="hidden" asp-for="Id" />
+            <div class="col-md-5">
+                <img src="~/Images/Product/SachTamly/@Model.Image" />
+            </div>
+            <div class="col-md-7">
+                <h2>@Model.Name</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p> Mô Tả: @Model.Description</p>
+                        <p> Loại Sách: @Model.Type</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Tác Giả : @Model.Publisher</p>
+                    </div>
+                </div>
+                <p>@Model.Price</p>
+                <p>
+                    Chính sách đổi trả: Đổi trả sản phẩm trong 30 ngày
+                </p>
+                <div class="quantity-container">
+                    <label for="quantity">Số lượng:</label>
+                    <button onclick="increaseQuantity()" class="quantity-btn">-</button>
+                    <input type="text" id="quantity" class="quantity-input" value="1" readonly>
+                    <button onclick="decreaseQuantity()" class="quantity-btn">+</button>
+                </div>
+            </div>
+    </form>
+</div>

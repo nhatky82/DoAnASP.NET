@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Product>
+<div class="body" style="margin-left:215px;margin-right:215px">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="hero__categories" style="margin-top:10px">
+                <div class="hero__categories__all">
+                    <i class="fa fa-bars text-dark"></i>
+                    <span class="font-weight-bold"><a asp-action="Index" asp-controller="Home" style="color:black;text-decoration:none">Tất cả thể loại</a></span>
+                </div>
+                <ul>
+                    <li><a href="@Url.Action("Index", "Page")" style="text-decoration:none">Sách Tâm Lý</a></li>
+                    <li><a href="@Url.Action("Tieuthuyet", "Page")" style="text-decoration:none">Tiểu thuyết</a></li>
+                    <li><a href="@Url.Action("Toan", "Page")" style="text-decoration:none">Sách Toán</a></li>
+                    <li><a href="@Url.Action("Nhancach", "Page")" style="text-decoration:none">Sách Rèn Luyện Nhân Cách</a></li>
+                    <li><a href="@Url.Action("Van", "Page")" style="text-decoration:none">Sách Văn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9" style="margin-top:10px">
+            <div class="hero__item">
+                <div class="hero__text">
+                    <span class="safeoff" style="font-weight:bold;font-size:x-large;color:white;">Sách Giảm giá</span>
+                    <h2 style="color:white">BookSale <br />Safe off 20%</h2>
+                    <p>Free Pickup and Delivery Available</p>
+                    <a asp-action="Index" asp-controller="Vouchers" class="primary-btn">SHOP NOW</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h3 class="text-center" style="width:50%;margin-left:300px;margin-top:50px;margin-bottom:30px;background-color:#7fad39;color:white">Sách Toán</h3>
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+                @if (item.ProductTypeID == 1)
+                {
+                    <div class="col-md-3">
+                        <form method="get" asp-controller="Products" asp-action="Detail" asp-route-id="@item.Id">
+                            <button style="border:white;background-color:white">
+                                <div class="card" style="height: 400px; margin-bottom: 20px; position: relative; width:290px;border:none">
+                                    <img class="card-img-top" src="~/Images/Product/SachTamly/@item.Image" alt="Card Images" style="height: 200px" />
+                                    <div class="card-body text-center">
+                                        <h4 class="card-title fw-bold" style="height: 50px">@item.Name</h4>
+                                        <p class="card-text text-info">@item.Description</p>
+                                        <p class="card-text text-danger">@item.Price.ToString("#,##0") VNĐ</p>
+                                        @*  <div class="row">
+                                <div class="col-md-6">
+                                <form method="get" asp-controller="Invoices" asp-action="Add" asp-route-id="@item.Id">
+                                <button type="submit" class="bg-info" style="width:150px">Mua Hàng</button>
+                                </form>
+                                </div>
+                                <div class="col-md-6">
+                                <form method="get" asp-controller="Products" asp-action="Detail" asp-route-id="@item.Id">
+                                <button type="submit" class="bg-secondary">Chi tiết sản phẩm</button>
+                                </form>
+
+                                </div>
+                                </div> *@
+                                        <div class="card-icons">
+                                            <ul class="featured__item__pic__hover">
+                                                <li><a class="" asp-controller="Favourites" asp-action="Add" asp-route-id="@item.Id"><i class="fa fa-heart"></i></a></li>
+
+                                                <li><a asp-controller="Carts" asp-action="Add" asp-route-id="@item.Id"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

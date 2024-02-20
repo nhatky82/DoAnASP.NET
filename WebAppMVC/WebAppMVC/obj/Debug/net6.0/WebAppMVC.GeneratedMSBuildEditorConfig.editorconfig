@@ -1,0 +1,229 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebAppMVC
+build_property.RootNamespace = WebAppMVC
+build_property.ProjectDir = D:\ky\Học kỳ 5\ASP.NET\DoAnHK5\WebAppMVC\WebAppMVC\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\ky\Học kỳ 5\ASP.NET\DoAnHK5\WebAppMVC\WebAppMVC
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Comments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/HomeAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Invoices/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW52b2ljZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Invoices/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW52b2ljZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Invoices/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW52b2ljZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Invoices/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW52b2ljZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Invoices/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW52b2ljZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Products/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Products/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Products/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Products/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Products/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Products/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/ProductTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFR5cGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/ProductTypes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFR5cGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/ProductTypes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFR5cGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/ProductTypes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFR5cGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/ProductTypes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFR5cGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Users/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Vouchers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm91Y2hlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/Vouchers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm91Y2hlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Carts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Contacts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Favourites/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3VyaXRlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Home/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Invoices/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZXNcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Invoices/_Partial_Voucher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZXNcX1BhcnRpYWxfVm91Y2hlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Page/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Page/Nhancach.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxOaGFuY2FjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Page/ProductCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxQcm9kdWN0Q2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Page/Tieuthuyet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxUaWV1dGh1eWV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Page/Toan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxUb2FuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Page/Van.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxWYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Products/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Shared/LayoutASP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dEFTUC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Users/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Users/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Users/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Vouchers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm91Y2hlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky/Học kỳ 5/ASP.NET/DoAnHK5/WebAppMVC/WebAppMVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-nesjfn7tch

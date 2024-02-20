@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sách</title>
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-P6c5cr6N9X7CyVY5OvqSTC4Pvb5Gy4WS9bYNxO/UpbcGl+KH+bP9QwS2E1dCC/O4V+0ZiQldWF7B4NsRtqIBlQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Css Styles -->
+
+
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="~/css/elegant-icons.css" >
+    <link rel="stylesheet" href="~/css/nice-select.css" >
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css" >
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" >
+    <link rel="stylesheet" href="~/css/slicknav.min.css" >
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebAppMVC.style.css" asp-append-version="true" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- jQuery Unobtrusive Ajax -->
+    <script src="https://cdn.jsdelivr.net/jquery.ajax.unobtrusive/3.2.6/jquery.unobtrusive-ajax.min.js"></script>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    @* <div id="preloder">
+        <div class="loader"></div>
+    </div> *@
+
+    <!-- Humberger Begin -->
+    <!-- Humberger End -->
+    <!-- Header Section Begin -->@* 7fad39 *@
+    <header class="header">
+        <div class="row" style="margin-left:215px;border-bottom:solid;margin-right:215px;display:flex">
+            <div class="email-support col-md-5" >
+                <i class="fa fa-envelope">Hotro@gmail.com</i>
+                <text class="ml-3" style="font-weight:inherit"> <i class="fa fa-link"></i> Http://www.bookshop.com</text>
+            </div>
+            <div id="textSlideshow" class="carousel slide col-md-5" data-ride="carousel" style="height:10px">
+                <div class="carousel-inner" style="padding-left:100px">
+                    <div class="carousel-item active">
+                        <div class="carousel-text">
+                            <p style="font-style: italic;">"Thành công bắt đầu từ đây.".</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-text">
+                            <p style="font-style:italic">"Tiếp thu những tri thức muôn màu."</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-text">
+                            <p style="font-style:italic">"Sách là cung cụ giúp ta học hỏi"</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#textSlideshow" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon text-dark" style="margin-top:1px" aria-hidden="true"></span>
+                    <span class="sr-only text-danger">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#textSlideshow" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="icon-header col-md-2" style="text-align:center">
+                <i class="fa fa-facebook" style="border-right:1px solid;margin-left:1px;padding-right:5px"></i>
+                <i class="fa fa-comment" style="border-right:1px solid;margin-left:1px;padding-right:5px"></i>
+                <i class="fa fa-github"></i>
+            </div>
+        </div>
+        <div class="header__top" style="padding-top:20px">
+                    <div class="row" style="margin-bottom:30px">
+                        <div class="col-md-2">
+                                <button asp-action="Index" asp-controller="Home" style="background-color:white;border:none; margin-left:250px; padding-right:-30px; width:300px">
+                                    <img src="~/Images/Product/Banner/isop.jpg" style="margin-top:10px; width:190px; height:70px; margin-left:-100px" />
+                                </button>                   
+                        </div>
+                        <div class="col-md-7">                   
+                                <div class="row mx-auto d-flex justify-content-center">
+                                  <nav class="navbar navbar-expand-sm navbar-toggleable-sm  box-shadow mb-3">
+                                    <div class="container-fluid">                            
+                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                                aria-expanded="false" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                    </div>
+                                  </nav>                              
+                                </div>
+                            <div class="row"> 
+                                <div class="col-md-8">
+                                    <div class="hero__search" style="margin-top:-1px;margin-right:-90px">
+                                        <div class="hero__search__form" >
+                                            @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "d-flex" }))
+                                            {
+                                                <div style="width: 400px; margin-left: 200px;">
+                                                    <div class="form-group" style="margin-left:40px;"><input type="text" style="border-top-left-radius: 20px;border-bottom-left-radius: 20px;background-color:	#DDDDDD;color:black;width:300px" placeholder="Bạn cần tìm gì?" name="searchTerm"></div>
+                                                    <div class="form-group"> <button type="submit" class="site-btn" style="height:49px;width:70px;margin-right:1px;padding-left:10px;background-color:	#DDDDDD"><i class="fa fa-search" style="color:black"></i> </button>  </div>
+                                               </div>
+                                            }
+                                        </div>                               
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div style="margin-top:10px;margin-left:50px;margin-right:-50px;border-radius:20px;border:solid;background-color:burlywood;height:35px">
+                                       <p style="color:orangered;margin-left:45px;margin-right:-35px;"><i class="fa fa-truck" style="margin-right:12px"></i>Giao Hàng Tận Nơi</p>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                        </div>
+                <div class="col-md-2" style="margin-left:-100px">
+                    <div class="header__cart" style="margin-top:-20px">
+                        <ul>
+                            @if (Context.Session.GetString("Id") == null)
+                            {
+                                <li><a asp-controller="Users" asp-action="Login" class="text-dark"><i class="fa fa-user m-1"></i>Đăng Nhập</a></li>
+                            }
+                            else
+                            {
+                                <li><a id="Login" asp-controller="Users" asp-action="Index" class="text-dark"><i class="fa fa-user m-1"></i>Tài Khoản</a></li>
+                            }
+
+                            
+                            <li><a asp-controller="Favourites" asp-action="Index"><i class="fa fa-heart"></i></a></li>
+                            <li><a asp-controller="Carts" asp-action="Index"><i class="fa fa-shopping-bag"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+       @*  <div class="container">
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div> *@
+                </div>
+    <div class="row d-flex" style="margin-top:-40px;height:40px;margin-left:215px;margin-right:215px;background-color:#9999">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm  box-shadow mb-3" style="margin-left:50px;margin-top:-15px">
+            <div class="container-fluid">
+                <div class="navbar-collapse collapse d-sm-inline-flex">
+                    <ul class="list-unstyled">
+                        <li class="d-inline;">
+                            <nav class="header__menu">
+                                <ul class="navbar-nav flex-grow-1">
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Vouchers" asp-action="Index">Trang Khuyến Mãi</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Contacts" asp-action="Index">Liên Hệ</a>
+                                    </li>
+                                               
+                                </ul>
+                                <div class="hotline" style="margin-top:-35px;margin-left:720px">
+                                    <span class="text-black" style="margin-bottom:200px">Hot Line :</span>
+                                    <a class="phone" style="padding-left:-10px">+84 0215641561</a>
+                                </div>
+                            </nav>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+        <br />
+    
+      
+    </header>
+    <!-- Header Section End -->
+    <!-- Hero Section Begin -->
+
+    
+    <main role="main" class="pb-3">
+        @RenderBody()
+     
+        <!-- Hero Section End -->
+        <!-- Categories Section Begin -->
+    </main>
+
+    <!-- Blog Section End -->
+    <!-- Footer Section Begin -->
+    <div class="footer" style="margin:0px 200px">
+    <footer class="footer spad" style="background-color:white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <h6 style="font-weight:bold">Liên hệ</h6>
+                        <ul>
+                            <p>
+                            <li>Địa chỉ: 60-49 Road 11378 </li>
+                            <li>Số điện thoại: +65 11.188.888</li>
+                            <li>Email: hello@colorlib.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                            <h6>Liên kết hữu ích</h6>
+                        <ul>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Giới thiệu về cửa hàng</a></li>
+                            <li><a href="#">Mua sắm an toàn</a></li>
+                            <li><a href="#">Thông tin giao hàng</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            
+                        </ul>
+                        <ul>
+                            <li><a href="#">Chúng tôi là ai</a></li>
+                            <li><a href="#">Dịch vụ của chúng tôi</a></li>
+                            <li><a href="#">Dự án</a></li>
+                            <li><a href="#">Liên lạc</a></li>
+                            <li><a href="#">Đổi mới</a></li>  
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                            <h6>
+                                Tham gia bản tin của chúng tôi ngay
+                            </h6>
+                            <p>Nhận thông tin cập nhật qua E-mail về cửa hàng mới nhất của chúng tôi và các ưu đãi đặc biệt.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Nhập mail của bạn">
+                            <button type="submit" class="site-btn" style="background-color:gray">Đăng kí</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                        <div class="footer__copyright__payment"><img src="~/Images/Product/" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <!-- Footer Section End -->
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/jsShoppingCart.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="~/js/site.js"></script>
+</body>
+
+</html>
+

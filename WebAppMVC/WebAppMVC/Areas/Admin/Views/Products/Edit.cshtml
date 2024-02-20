@@ -1,0 +1,48 @@
+﻿@model Product
+
+<form  asp-action="Edit" class="col-md-4" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Type"></label>
+        <input asp-for="Type" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="SKU"></label>
+        <input asp-for="SKU" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Publisher"></label>
+        <input asp-for="Publisher" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ImageFile"></label>
+        <input asp-for="ImageFile" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ProductTypeID"></label>
+        <select asp-items="@ViewBag.ProductTypes" asp-for="ProductTypeID" class="custom-select"></select>
+    </div>
+    <div class="custom-control custom-switch">
+        <input asp-for="Status" class="custom-control-input" checked>
+        <label asp-for="Status" class="custom-control-label">Còn hiệu lực</label>
+    </div>
+    <button class="btn btn-success mt-3">Sửa</button>
+    <p class="text-danger">@ViewBag.ErrorMessage</p>
+
+</form>

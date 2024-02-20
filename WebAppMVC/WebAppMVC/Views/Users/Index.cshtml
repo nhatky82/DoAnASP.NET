@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/LayoutASP.cshtml";
+}
+@model User
+
+
+<section class="shoping-cart spad p-5">
+    <div class="container" >
+        <div class="row">
+            <div class="col-lg-3">
+
+                <div class="hero__categories">
+                    <div class="hero__categories__all">
+                
+                        <span class="font-weight-bold"><a asp-action="Index" asp-controller="Home" style="color:black">Tài Khoản</a></span>
+                    </div>
+                    <ul>
+                        <li><a asp-controller="Users" asp-action="Index">Thông tin tài khoản</a></li>
+                        <li><a asp-controller="Users" asp-action="Edit">Cập nhật tài khoản</a></li>
+                        <li><a href="@Url.Action("Toan", "Page")">Đơn hàng của tôi</a></li>
+                        <li><a asp-controller="Users" asp-action="detail">Đổi mật khẩu</a></li>
+                        <li><a asp-controller="Users" asp-action="Logout">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            
+            </div>
+
+            <div class="col-lg-6 p-4" style="background-color:#F2F1EB;">
+                <div class="card-box text-center">
+
+                    <img src="Images/User/@Html.DisplayFor(model => model.Avatar)" style="max-width:25%" class="rounded-circle avatar-lg img-thumbnail" alt="profile-image">
+
+                    <h4 class="mb-0" style="padding-bottom:15px;">@Html.DisplayFor(model => model.FullName)</h4>
+
+
+                    @* <a asp-controller="Users" asp-action="Edit" type="button" class="btn btn-success btn-xs waves-effect mb-2 waves-light">Cập Nhật Tài Khoản</a> *@
+
+                    <div class="text-left mt-3">
+
+                        <p class="text-muted mb-2 font-25">
+                            <strong>Họ và Tên:</strong> <span class="ml-2">
+                                @Html.DisplayFor(model => model.FullName)
+                            </span>
+                        </p>
+
+                        <p class="text-muted mb-2 font-25">
+                            <strong>Số Điện Thoại:</strong><span class="ml-2">
+                                @Html.DisplayFor(model => model.Phone)
+                            </span>
+                        </p>
+
+                        <p class="text-muted mb-2 font-25"><strong>Email:</strong> <span class="ml-2 ">@Html.DisplayFor(model => model.Email)</span></p>
+
+                        <p class="text-muted mb-1 font-25"><strong>Địa Chỉ:</strong> <span class="ml-2">@Html.DisplayFor(model => model.Address)</span></p>
+                    </div>
+
+                   @*  <a asp-area="" asp-controller="Users" asp-action="Logout" class="btn btn-outline-danger float-right mt-3">Đăng Xuất</a>
+                    <a asp-area="" asp-controller="Users" asp-action="detail" class="btn btn-outline-success float-left mt-3">Đổi Mật Khẩu</a> *@
+                </div> <!-- end card-box -->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+

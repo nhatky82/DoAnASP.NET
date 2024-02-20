@@ -1,0 +1,9 @@
+﻿@model WebAppMVC.Models.ViewModels.InvoiceViewModel
+@{
+    var total = ViewBag.Total;
+    var total2 = ViewBag.Reduce;
+}
+<form asp-controller="Vouchers" asp-action="CodeVoucher">
+    <input type="text" placeholder="Nhập mã khuyến mãi" name="codeVoucher">
+    <button type="submit" class="site-btn">Áp Dụng Mã</button>
+</form>

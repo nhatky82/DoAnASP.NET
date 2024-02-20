@@ -1,0 +1,75 @@
+﻿@model IEnumerable<User>
+
+
+<p>
+    <a  class="btn btn-primary" asp-controller="Users" asp-action="Register">Tạo tài khoản mới</a>
+</p>
+<table class="table text-center ">
+    <thead class="table table-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsAdmin)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>Chức năng</th>
+        </tr>
+    </thead>
+    <tbody class="table-light">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsAdmin)
+                </td>
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-danger w-100 mb-1">Sửa</a> <br>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info w-100 mb-1  ">Chi tiết</a> <br>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-success w-100 mb-1  ">Xóa tài khoản</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,454 @@
+﻿@model WebAppMVC.Models.ProductViewModel
+@using Microsoft.AspNetCore.Http
+
+
+<div class="body">
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="hero__categories" style="margin-top:10px">
+                    <div class="hero__categories__all">
+                        <i class="fa fa-bars text-dark"></i>
+                        <span class="font-weight-bold"><a asp-action="Index" asp-controller="Home" style="color:black;text-decoration:none">Tất cả thể loại</a></span>
+                    </div>
+                    <ul>
+                        <li><a href="@Url.Action("Index", "Page")" style="text-decoration:none">Sách Tâm Lý</a></li>
+                            <li><a href="@Url.Action("Tieuthuyet", "Page")" style="text-decoration:none">Tiểu thuyết</a></li>
+                            <li><a href="@Url.Action("Toan", "Page")" style="text-decoration:none">Sách Toán</a></li>
+                            <li><a href="@Url.Action("Nhancach", "Page")" style="text-decoration:none">Sách Rèn Luyện Nhân Cách</a></li>
+                            <li><a href="@Url.Action("Van", "Page")" style="text-decoration:none">Sách Văn</a></li>
+                        </ul> 
+                </div>
+            </div>
+            <div class="col-md-9" style="margin-top:10px">
+                <div class="hero__item" data-setbg="~/Images/Product/Banner/Banner1.jpg" style="background-image: url('Images/Product/Banner/Banner1.jpg');">
+                    <div class="hero__text">
+                        <span class="safeoff" style="font-weight:bold;font-size:x-large;color:white;">Sách Giảm giá</span>
+                        <h2 style="color:white">BookSale <br />Safe off 20%</h2>
+                        <p>Free Pickup and Delivery Available</p>
+                        <a asp-action="Index" asp-controller="Vouchers" class="primary-btn">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Categories Section End -->
+<!-- Featured Section Begin -->
+<!-- Featured Section End -->
+<!-- Banner Begin -->
+
+<div class="m-5 text-center">
+    <p class="mt-5">❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖</p>
+</div>
+
+
+        <section class="categories">
+            <div class="container">
+                <div class="row">
+                    <div class="categories__slider owl-carousel">
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg">
+                                <img src="~/Images/Product/SachTamly/PhaiTraiDungSai.jpg" />
+                                <h5><a href="#">Fresh Fruit</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg">
+                                <img src="~/Images/Product/SachTamly/PhaiTraiDungSai.jpg" />
+                                <h5><a href="#">Tiểu thuyết</a></h5>      
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg">
+                                <img src="~/Images/Product/SachTamly/TamLiHocVeTien.jpg" />
+                                <h5><a href="#">Sách Văn Học</a></h5>  
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg">
+                                <img src="~/Images/Product/SachTamly/book8.jpg" />
+                                <h5><a href="#">Sách rèn luyện </a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg">
+                                <img src="~/Images/Product/SachTamly/book4.jpg" />
+                                <h5><a href="#">Sách Toán</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <div class="m-5 text-center">
+    <p>❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖</p>
+</div>
+
+
+  
+    
+   
+<h3 class="text-center" style="width:50%;margin-left:280px;margin-top:50px;margin-bottom:30px;background-color:#7fad39;color:white">Danh Sách Sản Phẩm</h3>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+    {
+        <div class="d-flex">
+            <div>
+                <label style="font-weight:bold"> Sản phẩm theo giá: </label>
+            </div>
+            <div class="w-75 ml-2" style="margin-top:-10px;height:20px;margin-bottom:60px">
+                <select name="selectedSection" onchange="this.form.submit()">
+                    <option value="" selected="@((string)ViewBag.SelectedSection == "" ? "selected" : null)">Tất cả</option>
+                    <option value="Dưới 100k" selected="@((string)ViewBag.SelectedSection == "Dưới 100k" ? "selected" : null)">Dưới 100k</option>
+                    <option value="Từ 100k -> 200k" selected="@((string)ViewBag.SelectedSection == "Từ 100k -> 200k" ? "selected" : null)">Từ 100k -> 200k</option>
+                    <option value="Trên 200k" selected="@((string)ViewBag.SelectedSection == "Trên 200k" ? "selected" : null)">Trên 200k</option>
+                </select>
+            </div>
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(ViewBag.SearchTerm))
+    {
+        <p>Kết quả tìm kiếm cho: <strong class="text-danger ml-1">@ViewBag.SearchTerm</strong></p>
+    }
+    @if (!string.IsNullOrEmpty(ViewBag.Message))
+    {
+        <p><strong class="text-danger ml-1">@ViewBag.Message</strong></p>
+    }
+
+<div class="row">
+    @foreach (var item in Model.Products)
+    {
+                
+        <div class="col-md-3">
+             <a asp-controller="Products" asp-action="Detail" asp-route-id="@item.Id" style="text-decoration:none"> 
+                 <div style="border:white ;background-color:white">
+                    <div class="card" style="height: 400px; margin-bottom: 20px; position: relative; width:290px;border:none">
+                        <img class="card-img-top" src="~/Images/Product/SachTamly/@item.Image" alt="Card Images" style="height: 200px" />
+                        <div class="card-body text-center">
+                            <h4 class="card-title fw-bold" style="height: 50px">@item.Name</h4>
+                            <p class="card-text text-info">@item.Description</p>
+                            <p class="card-text text-danger">@item.Price.ToString("#,##0") VNĐ</p>
+
+                            <div class="card-icons" >
+                                <ul class="featured__item__pic__hover">
+                                    <li><a class="" asp-controller="Favourites" asp-action="Add" asp-route-id="@item.Id"><i class="fa fa-heart"></i></a></li>
+
+                                    <li><a  asp-controller="Carts" asp-action="Add" asp-route-id="@item.Id"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                       
+                            </div>
+                   
+                        </div>
+                    </div>
+                    </div>
+             </a>
+        </div>
+       
+    }
+</div>
+    <div class="pagination justify-content-center">
+    <!-- ... Code phân trang ... -->
+        <ul class="pagination">
+        @for (int i = 1; i <= Model.PaginationInfo.TotalPages; i++)
+        {
+            <li class="page-item @(Model.PaginationInfo.CurrentPage == i ? "active" : "")">
+                    <a class="page-link" href="?pageIndex=@i&searchTerm=@Context.Request.Query["searchTerm"]&selectedSection=@Context.Request.Query["selectedSection"]">
+                    @i
+                </a>
+            </li>
+        }
+    </ul>
+</div>
+<div>
+    <img style="border-radius:10px;width:1200000px;height:200px;margin-top:20px;margin-left:17px" src="/Images/Product/Banner/Book-Banner-index.jpg" />
+</div>
+<div class="Banner">
+    <div class="Banner-blog">
+        <img src="/Images/Product/Banner/Banner-book.jpg"/>
+            <p>
+                <span style="font-family: Arial, sans-serif; font-size: 2em;">"K</span>hám Phá Vô Tận Tri Thức và Phiêu Lưu Tâm Hồn - Nơi Những Trang Sách Mở Cánh Cửa Đến <strong style="color:orangered">Thế Giới Mơ Ước</strong>. Hãy Cùng Chúng Tôi Bước Chân vào Những Trang Sách Đầy Huyền Bí, Nơi Mà Câu Chuyện Trở Nên Sống Động và Tâm Hồn Mở Rộ. Chúng Tôi Tin Rằng Mỗi Quyển Sách Là Một Cửa Sổ Mở Ra Vũ Trụ Vô Tận của Tri Thức và Trí Tưởng Tượng. Hãy Cùng Đắm Chìm trong Thế Giới Của Chúng Tôi và Tìm Kiếm Câu Chuyện Mà Bạn Sẽ Mang Theo Suốt Đời."
+            </p>
+    </div>
+    <div class="Banner-blog-2">
+            <p>
+                <span style="font-family: Arial, sans-serif; font-size: 3em;">"C</span>húng tôi tin rằng mỗi cuốn sách là một cánh cửa mở ra vũ trụ của tri thức, tưởng tượng, và những trải nghiệm mới mẻ. Tại đây, bạn sẽ không chỉ tìm thấy những đánh giá chân thành về những tựa sách nổi bật, mà còn những bài viết sâu sắc về nghệ thuật đọc, xu hướng văn hóa, và những cuộc phiêu lưu tâm hồn đáng nhớ.
+            </p>
+            <img src="/Images/Product/Banner/pexel.jpg" />
+    </div>
+</div>
+<div class="Banner-video">
+
+</div>
+
+
+<!-- Banner End -->
+<!-- Latest Product Section Begin -->
+
+
+<section class="latest-product spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="latest-product__text">
+                    <h4>Latest Products</h4>
+                    <div class="latest-product__slider owl-carousel">
+                        <div class="latest-prdouct__slider__item">
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/PhaiTraiDungSai.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/TamLiHocMoiQuanHe.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/TuHuyetCamXuc.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="latest-prdouct__slider__item">
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/1CuonSachChuaLanh.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/book12.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/book5.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="latest-product__text">
+                    <h4>Top Rated Products</h4>
+                    <div class="latest-product__slider owl-carousel">
+                        <div class="latest-prdouct__slider__item">
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/20DangHinhToiAc.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/book5.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/book9.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="latest-prdouct__slider__item">
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/book2.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/book8.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/TamLiHocVeTien.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="latest-product__text">
+                    <h4>Review Products</h4>
+                    <div class="latest-product__slider owl-carousel">
+                        <div class="latest-prdouct__slider__item">
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/ThienTaiBenTraiKeDienBenPhai.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/book5.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/PhaiTraiDungSai.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="latest-prdouct__slider__item">
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/book3.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/1CuonSachChuaLanh.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="~/Images/Product/SachTamly/TamLiHocMoiQuanHe.jpg">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Crab Pool Security</h6>
+                                    <span>$30.00</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Product Section End -->
+<!-- Blog Section Begin -->
+<section class="from-blog spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title from-blog__title">
+                    <h2>From The Blog</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="blog__item">
+                    <div class="blog__item__pic">
+                        <img src="~" alt="">
+                    </div>
+                    <div class="blog__item__text">
+                        <ul>
+                            <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                            <li><i class="fa fa-comment-o"></i> 5</li>
+                        </ul>
+                        <h5><a href="#">Đọc Sách theo thời gian và cảm nhận</a></h5>
+                            <p>
+                                Một năm đọc sách nữa lại đến rồi đi, mang theo những cảm giác u sầu về thời gian trôi qua, mọi thứ thay đổi và cái chết đang rình rập. Chúng tôi nhận ra rằng phương thuốc tốt nhất cho vấn đề này là mong chờ một năm mới với sách! Khi điều đó xảy ra, năm 2024 sẽ là một cơn lốc.
+                            </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="blog__item">
+                    <div class="blog__item__pic">
+                        <img src="img/blog/blog-2.jpg" alt="">
+                    </div>
+                    <div class="blog__item__text">
+                        <ul>
+                            <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                            <li><i class="fa fa-comment-o"></i> 5</li>
+                        </ul>
+                            <h5><a href="#">6 Cuốn Sách Mới Được Độc Giả Đề Xuất Tuần Này</a></h5>
+                        <p>Những cuốn sách hay và sáng tạo được chính các đọc giả yêu cầu trong tuần này</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="blog__item">
+                    <div class="blog__item__pic">
+                        <img src="img/blog/blog-3.jpg" alt="">
+                    </div>
+                    <div class="blog__item__text">
+                        <ul>
+                            <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                            <li><i class="fa fa-comment-o"></i> 5</li>
+                        </ul>
+                        <h5><a href="#">Giá trị của sách</a></h5>
+                            <p>Sách là thế giới thu nhỏ, cho phép ta trải nghiệm, cảm nhận rất nhiều cung bậc cảm xúc khác nhau. Qua những câu chuyện đầy xúc động mỗi người lại tự rút ra những bài học cho riêng mình </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>

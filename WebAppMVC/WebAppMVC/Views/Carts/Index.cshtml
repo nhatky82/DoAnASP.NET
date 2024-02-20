@@ -1,0 +1,128 @@
+﻿@{
+    // ViewData["Title"] = "ChangesPass";
+    Layout = "~/Views/Shared/LayoutASP.cshtml";
+}
+
+@model IEnumerable<Cart>
+@{
+    var sum = 0;
+}
+<section class="breadcrumb-section set-bg" data-setbg="Images/Product/Banner/contact.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>GIỎ HÀNG</h2>
+                    <div class="breadcrumb__option">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
+                        <span>Giỏ Hàng</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div>
+</div>
+
+@if (Model.Count() > 0)
+{
+    <section class="shoping-cart spad">
+        <div class="container w-75">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="shoping__cart__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="shoping__product">Sản Phẩm</th>
+                                    <th>Đơn Giá</th>
+                                    <th>Số Lượng</th>
+                                    <th>Số Tiền</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <div style="display:none;">@(sum += item.Quantity * item.Product.Price);</div>
+
+                                    <tr>
+                                        <td class="shoping__cart__item">
+                                            <img style="width:150px" src="~/Images/Product/SachTamly/@item.Product.Image" alt="">
+                                            <h5>@item.Product.Name</h5>
+                                        </td>
+                                        <td class="shoping__cart__price">
+                                            @string.Format("{0:#,##0} đ", item.Product.Price)
+                                        </td>
+                                        <td class="shoping__cart__quantity">
+                                            <div class="quantity">
+                                                <div class="pro-qty">
+                                                    <a asp-controller="Carts" asp-action="Decrease" asp-route-id="@item.ProductID" class="dec qtybtn">-</a>
+                                                    <input type="text" value="@item.Quantity">
+                                                    <a asp-controller="Carts" asp-action="Increase" asp-route-id="@item.ProductID" class="inc qtybtn">+</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="shoping__cart__total">
+                                            @string.Format("{0:#,##0} đ", item.Product.Price * item.Quantity)
+                                        </td>
+                                        <td class="shoping__cart__item__close">
+                                            <a asp-controller="Carts" asp-action="Close" asp-route-id="@item.ProductID"><span class="icon_close"></span> </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="shoping__cart__btns">
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="primary-btn cart-btn" style="text-decoration:none;">Tiếp Tục Mua Sách</a>
+                        <a asp-area="" asp-controller="Carts" asp-action="Index" class="primary-btn cart-btn cart-btn-right" style="text-decoration:none;">
+                            <span class="icon_loading"></span>
+                            Cập Nhật Giỏ Hàng
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="shoping__continue">
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="shoping__checkout">
+                        <ul>
+                            <li>Tổng Số Tiền <span> @string.Format("{0:#,##0} đ", sum)</span></li>
+                        </ul>
+                        <a asp-area="" asp-controller="Invoices" asp-action="Index" class="primary-btn" style="text-decoration:none;">Thanh Toán</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else
+{
+
+    <section class="shoping-cart spad pt-4">
+        <div class="container w-50 text-center">
+            <h4 class="mb-3"></h4>
+            <img src="~/Images/Product/Banner/shopping_cart.png" style="width:100px;" alt="profile-image">
+            <p class="mt-3">Chưa có sản phẩm trong giỏ hàng của bạn.</p>
+            <a type="submit" class="btn btn-success" asp-controller="Home" asp-action="Index">MUA SẮM NGAY</a>
+        </div>
+    </section>
+}
+
+
+
+
+
+
+

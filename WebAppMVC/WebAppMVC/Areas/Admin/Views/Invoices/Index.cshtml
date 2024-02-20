@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Invoice>
+<a class="btn btn-secondary mb-4" asp-controller="Invoices" asp-action="ExportExcel">Export File to Excel </a>
+<table class="table text-center ">
+    <thead class="table table-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentMethodsID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShippingAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShippingPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InvoiceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th>Chức năng</th>
+        </tr>
+    </thead>
+    <tbody class="table-light">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentMethodsID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippingAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippingPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InvoiceDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.status)
+                </td>
+                <td>
+                    @*<a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-danger w-100 mb-1">Edit</a> <br>*@
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info w-100 mb-1  ">Xem hóa đơn</a> <br>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-success w-100 mb-1  ">Xóa hóa đơn</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
